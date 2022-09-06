@@ -36,7 +36,7 @@ sshagent(['76c83a0c-1284-4d54-bc73-4f09414339bd']) {
 */
 } //try block closing
 catch (e){
-slackNotifications(fILURE)
+slackNotifications(FAILURE)
 throw (e)
 }
 finally{
