@@ -16,7 +16,7 @@ stage( 'CheckOutCode' ){
 git credentialsId: '0b169f93-39fd-47b9-9637-f217ee813c9d', url: 'https://github.com/Nadeem-Shabaz/maven-web-application.git'
 }
 
-stage( 'Build' ){
+stage( 'Build' )
 sh "${mavenHome}/bin/mvn clean package"
 }
 /*
