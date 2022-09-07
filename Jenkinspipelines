@@ -25,7 +25,7 @@ sh "${mavenHome}/bin/mvn clean sonar:sonar"
 }
 
 stage ('UploadArtifactsInfoArtifactoryRepo'){
-sh "${mavenHome}/bin/mvn clean deploy"
+sh "${mavenHome}/bin/mvn clean deploy2"
 }
 
 stage('DeployAppIntoTomcatServer'){
@@ -36,7 +36,7 @@ sshagent(['76c83a0c-1284-4d54-bc73-4f09414339bd']) {
 
 } //try block closing
 catch (e){
-slackNotifications(FAILURE)
+slackNotifications(FAILED)
 throw (e)
 }
 finally{
