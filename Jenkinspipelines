@@ -15,7 +15,7 @@ slackNotifications('STARTED')
 stage( 'CheckOutCode' ){
 git credentialsId: '0b169f93-39fd-47b9-9637-f217ee813c9d', url: 'https://github.com/Nadeem-Shabaz/maven-web-application.git'
 }
-
+/*
 stage( 'Build' ){
 sh "${mavenHome}/bin/mvn clean package"
 }
@@ -33,7 +33,7 @@ sshagent(['76c83a0c-1284-4d54-bc73-4f09414339bd']) {
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.42.231:/opt/apache-tomcat-9.0.65/webapps/"
 }
 }
-
+*/
 } //try block closing
 catch (e){
 slackNotifications(FAILED)
